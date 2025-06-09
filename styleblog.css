@@ -1,0 +1,205 @@
+/* ================================
+            RESET Y BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body.index-page {
+    overflow-y: auto;
+}
+
+/* ================================
+          TIPOGRAFÍAS PERSONALIZADAS
+================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face {
+    font-family: "Sketsa";
+    src: url(fonts/Sketsa.ttf);
+}
+
+@font-face {
+    font-family: "Saudagar";
+    src: url(fonts/Saudagar.ttf);
+}
+
+/* ================================
+           NAVIGATION
+================================ */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: #fff; 
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    right: 5px;
+    display: none;
+}
+
+.nav-menu {
+    display: inline-block;
+    text-align: center;
+    z-index: 1001;
+    position: relative;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.nav-menu li a {
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: rgb(255, 0, 140);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+/* ================================
+         VIDEO DE FONDO
+================================ */
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================================
+     MOSTRAR CONTENIDO ENCIMA DEL VIDEO
+================================ */
+
+.content-wrapper {
+    margin-top: 0px; /* Se elimina margen superior extra */
+    padding-top: 30px; /* Se ajusta para que no esté tan abajo */
+    position: relative;
+    z-index: 1000;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px 40px; /* Ajuste adicional para subir más el contenido */
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 140, 0.4);
+}
+
+.content-wrapper section {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+.content-wrapper h2 {
+    font-size: 24px;
+    color: #ff008c;
+    border-bottom: 2px solid #ff008c;
+    padding-bottom: 10px;
+}
+
+.content-wrapper p,
+.content-wrapper li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.content-wrapper blockquote {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid #ff008c;
+    font-style: italic;
+    color: #000000;
+}
+
+.content-wrapper ul {
+    padding-left: 20px;
+}
+
+.content-wrapper ul li {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.content-wrapper a {
+    color: #ff008c;
+    text-decoration: underline;
+}
+
+.content-wrapper a:hover {
+    color: #ff66cc;
+}
+
+/* ================================
+           FOOTER LIMPIO Y ESTÁTICO
+================================ */
+
+.site-footer {
+    position: relative;
+    z-index: 1000;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #aaa;
+    background-color: transparent;
+    clear: both;
+    font-weight: normal;
+}
