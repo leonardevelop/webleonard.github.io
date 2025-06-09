@@ -227,3 +227,65 @@ nav {
         font-size: 18px;
     }
 }
+
+/* ================================
+        ESTILOS RESPONSIVOS MÓVIL
+================================ */
+
+@media screen and (max-width: 764px) {
+    /* Mostrar botón hamburguesa */
+    .bar-btn {
+        display: block;
+    }
+
+    /* Ocultar menú en desktop y mostrarlo como menú vertical en móvil */
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+
+    /* Mostrar menú cuando se marca el checkbox */
+    #check:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    /* Ajustes del logo */
+    .logo {
+        max-width: 60px;
+    }
+
+    /* Ajuste del texto */
+    .banner-text h1 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    .banner-text h2 {
+        font-size: 24px;
+        letter-spacing: 0.05cm;
+    }
+
+    .parrafo1,
+    .parrafo2 {
+        font-size: 14px;
+        margin: 20px 20px 0;
+        width: auto;
+    }
+}
