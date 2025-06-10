@@ -145,4 +145,34 @@ section p {
     main p {
         font-size: 1rem;
     }
+
+    /* Ajustes generales en la estructura */
+    html, body {
+        height: 100vh; /* Altura completa de la pantalla */
+        overflow: hidden; /* Desactivamos cualquier tipo de scroll global */
+        display: flex; /* Usamos flexbox para organizar el layout */
+        flex-direction: column; /* Organizamos en columna */
+    }
+
+    /* Contenido principal con scroll limitado */
+    main {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        overflow-y: auto; /* Permite scroll vertical solo dentro de main */
+        padding-bottom: 80px; /* Espacio para evitar que el contenido toque el footer */
+    }
+
+    /* Footer pegado al final */
+    .footer {
+        position: relative; /* Mantenemos el footer relativo al cuerpo */
+        margin-top: auto; /* Empuja el footer hacia abajo */
+        height: 80px; /* Altura del footer */
+        width: 100%; /* Ocupa todo el ancho */
+        color: rgb(255, 255, 255);
+        background-color: #ae3a3a;
+        font-size: 10px;
+        display: flex;
+        justify-content: center; /* Centra el texto horizontalmente */
+        align-items: center; /* Centra el texto verticalmente */
+    }
+}
 }
