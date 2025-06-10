@@ -20,6 +20,8 @@ body {
 
 body.index-page {
     overflow-y: auto; /* Permite scroll vertical si hay mucho contenido */
+    display: flex;
+    flex-direction: column; /* Organiza el layout en columna */
 }
 
 .footer {
@@ -127,17 +129,18 @@ section p {
     /* Ajustes generales en la estructura */
     html, body {
         height: auto; /* Permitimos que el cuerpo crezca según el contenido */
+        display: block; /* Usamos el flujo natural del documento */
     }
 
     /* Contenido principal */
     main {
-        display: block; /* Usamos el flujo natural del documento */
-        margin-bottom: 50px; /* Espacio entre el contenido y el footer */
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        margin-bottom: 0; /* Eliminamos margen innecesario */
     }
 
     /* Footer al final del contenido */
     .footer {
-        margin-top: 0; /* Eliminamos margen automático */
+        margin-top: 0; /* No necesitamos margen automático */
         height: 50px; /* Altura del footer */
     }
 }
