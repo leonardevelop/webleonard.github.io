@@ -17,6 +17,8 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 html, body {
@@ -24,10 +26,7 @@ html, body {
     height: 100% !important; /* Asegura que el contenido no desborde */
     margin: 0; /* Elimina márgenes por defecto */
     padding: 0; /* Elimina el padding por defecto */
-    display: flex;
-    flex-direction: column;
 }
-
 
 body.index-page {
     overflow-y: auto;
@@ -40,9 +39,9 @@ body.index-page {
     display: flex; /* Activa flexbox */
     justify-content: center; /* Centra el texto horizontalmente */
     align-items: center; /* Centra el texto verticalmente */
-    height: 40px;
-    margin-top: 40px; /* Ajusta la altura del footer según necesites */
+    height: 50px; /* Ajusta la altura del footer según necesites */
 }
+
 
 /* ================================
           TIPOGRAFÍAS PERSONALIZADAS
@@ -173,35 +172,11 @@ body.index-page {
 }
 
 
-    .logo {
-        max-width: 100px;
-    }
-
-    .banner-text h1 {
-        font-size: 50px;
-        margin-bottom: 10px;
-        margin-top: 10;
-    }
-
-    .banner-text h2 {
-        font-size: 40px;
-        margin-top: 20px;
-    }
-
 /* ================================
    ESTILOS RESPONSIVOS
 ================================ */
 
 @media (max-width: 768px) {
-    /* Estilo para los encabezados */
-    main h1 {
-        font-size: 2rem;
-    }
-
-    main p {
-        font-size: 1rem;
-    }
-
     /* Ajustes generales en la estructura */
     html, body {
         font-family: "Montserrat", sans-serif;
@@ -209,9 +184,19 @@ body.index-page {
         color: #fff;
         margin: 0;
         padding: 0;
-        height: 100%;
-        display: flex;
-        flex-direction: column; /* Esto asegura que el footer siempre esté al final */
+        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+        display: flex; /* Usamos flexbox para organizar el layout */
+        flex-direction: column; /* Organizamos en columna */
+        overflow: hidden; /* Desactivamos el scroll */
+    }
+
+    /* Contenido principal */
+    main {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        display: flex; /* Usamos flexbox para centrar el contenido */
+        flex-direction: column; /* Organizamos en columna */
+        justify-content: center; /* Centramos verticalmente */
+        align-items: center; /* Centramos horizontalmente */
     }
 
     /* Footer */
@@ -219,59 +204,9 @@ body.index-page {
         color: rgb(255, 255, 255);
         background-color: #ae3a3a;
         font-size: 10px;
-        margin-top: auto; /* Empuja el footer hacia el final */
         display: flex;
         justify-content: center; /* Centra el texto horizontalmente */
         align-items: center; /* Centra el texto verticalmente */
         height: 50px; /* Ajusta la altura del footer */
-    }
-
-    /* Banner */
-    .banner-text h1 {
-        font-size: 14px;
-        margin-bottom: 40px;
-        margin-top: 10px;
-        animation: escribir 3s steps(40) forwards;
-        font-family: monospace;
-        overflow: hidden;
-        border-right: 2px solid #efc743;
-        position: relative;
-    }
-
-    /* Habilitar el scroll solo cuando sea necesario */
-    html, body {
-        overflow-x: hidden; /* Evita que haya scroll horizontal */
-    }
-
-    body.index-page {
-        overflow-y: auto; /* Permite scroll vertical si es necesario */
-    }
-
-    /* Estilo para el h1 dentro de .banner-text */
-    .banner-text h1 {
-        font-size: 14px;
-        margin-top: 40px;
-        animation: escribir 3s steps(40) forwards;
-    }
-
-    /* Se asegura de que el contenido no desborde más allá del footer */
-    body.index-page {
-        flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible sin empujar el footer hacia abajo */
-    }
-
-    /* Si se quiere un control más estricto sobre el scroll */
-    html, body {
-        overflow: auto !important; /* Permite scroll si es necesario */
-    }
-
-    /* Aseguramos que el footer quede pegado en dispositivos pequeños */
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    main {
-        flex-grow: 1;
     }
 }
