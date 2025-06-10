@@ -228,5 +228,23 @@ body.index-page {
         position: relative;
         margin-top: 40px;
     }
+
+                    html,
+    body {
+        height: 100%;
+        font-family: "Montserrat", sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+    }
+
+    html, body {
+        overflow: hidden !important; /* Desactiva completamente el scroll */
+        height: 100% !important; /* Asegura que el contenido no desborde */
+        margin: 0; /* Elimina márgenes por defecto */
+        padding: 0; /* Elimina el padding por defecto */
+        display: flex;
+        flex-direction: column
+    }
     
 }
