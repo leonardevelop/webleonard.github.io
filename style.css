@@ -17,8 +17,6 @@ body {
     background-color: #000;
     color: #fff;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
 }
 
 html, body {
@@ -26,7 +24,10 @@ html, body {
     height: 100% !important; /* Asegura que el contenido no desborde */
     margin: 0; /* Elimina márgenes por defecto */
     padding: 0; /* Elimina el padding por defecto */
+    display: flex;
+    flex-direction: column;
 }
+
 
 body.index-page {
     overflow-y: auto;
@@ -39,9 +40,9 @@ body.index-page {
     display: flex; /* Activa flexbox */
     justify-content: center; /* Centra el texto horizontalmente */
     align-items: center; /* Centra el texto verticalmente */
-    height: 50px; /* Ajusta la altura del footer según necesites */
+    height: 80px;
+    margin-top: 30px; /* Ajusta la altura del footer según necesites */
 }
-
 
 /* ================================
           TIPOGRAFÍAS PERSONALIZADAS
@@ -66,7 +67,7 @@ body.index-page {
            NAVIGATION
 ================================ */
 
-#navbar {   
+#navbar {      
     position: fixed;
     top: 0;
     left: 0;
@@ -172,41 +173,64 @@ body.index-page {
 }
 
 
+    .logo {
+        max-width: 100px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        margin-top: 10;
+    }
+
+    .banner-text h2 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
 /* ================================
    ESTILOS RESPONSIVOS
 ================================ */
 
 @media (max-width: 768px) {
-    /* Ajustes generales en la estructura */
+    /* Hacemos la página completamente estática */
     html, body {
-        font-family: "Montserrat", sans-serif;
-        background-color: #000;
-        color: #fff;
-        margin: 0;
-        padding: 0;
-        height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+        height: 100vh; /* Altura completa de la pantalla */
+        overflow: hidden; /* Desactivamos cualquier tipo de scroll */
         display: flex; /* Usamos flexbox para organizar el layout */
         flex-direction: column; /* Organizamos en columna */
-        overflow: hidden; /* Desactivamos el scroll */
     }
 
-    /* Contenido principal */
-    main {
-        flex-grow: 1; /* Ocupa todo el espacio disponible */
-        display: flex; /* Usamos flexbox para centrar el contenido */
-        flex-direction: column; /* Organizamos en columna */
-        justify-content: center; /* Centramos verticalmente */
-        align-items: center; /* Centramos horizontalmente */
-    }
-
-    /* Footer */
+    /* Footer pegado al final en dispositivos pequeños */
     .footer {
+        position: absolute; /* Posicionamiento absoluto */
+        bottom: 0; /* Pegado al final */
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
         color: rgb(255, 255, 255);
         background-color: #ae3a3a;
         font-size: 10px;
         display: flex;
         justify-content: center; /* Centra el texto horizontalmente */
         align-items: center; /* Centra el texto verticalmente */
-        height: 50px; /* Ajusta la altura del footer */
+        height: 80px; /* Mantenemos la altura original del footer */
     }
+
+    /* Contenido principal centrado verticalmente */
+    main {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner-text h1 {
+    animation: escribir 3s steps(40) forwards;
+    font-size: 20px;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #efc743;
+    position: relative;
+    margin-top: 40px;
 }
