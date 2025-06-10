@@ -192,43 +192,29 @@ body.index-page {
         margin-top: 20px;
     }
 
- 
 /* ================================
    ESTILOS RESPONSIVOS
 ================================ */
 
 @media (max-width: 768px) {
-    /* Estilo para los encabezados */
-    main h1 {
-        font-size: 2rem;
-    }
-
-    main p {
-        font-size: 1rem;
-    }
-
-    /* Ajustes generales en la estructura */
+    /* Ajustes generales para la estructura */
     html, body {
         font-family: "Montserrat", sans-serif;
         background-color: #000;
         color: #fff;
         margin: 0;
         padding: 0;
-        min-height: 100vh; /* Asegura que la página ocupe el 100% de la pantalla */
         display: flex;
-        flex-direction: column; /* Flexbox para alinear footer al final */
+        flex-direction: column;
+        min-height: 100vh; /* Asegura que el contenido ocupe al menos el 100% de la ventana */
     }
 
-    /* Footer */
-    .footer {
-        color: rgb(255, 255, 255);
-        background-color: #ae3a3a;
-        font-size: 10px;
-        margin-top: auto; /* Empuja el footer hacia el final */
+    /* Para permitir el scroll solo cuando el contenido sea más grande */
+    body {
         display: flex;
-        justify-content: center; /* Centra el texto horizontalmente */
-        align-items: center; /* Centra el texto verticalmente */
-        height: 50px; /* Ajusta la altura del footer */
+        flex-direction: column;
+        flex-grow: 1;
+        overflow-x: hidden; /* Elimina el scroll horizontal */
     }
 
     /* Banner */
@@ -243,30 +229,27 @@ body.index-page {
         position: relative;
     }
 
-    /* Habilitar el scroll solo cuando sea necesario */
+    /* Footer */
+    .footer {
+        color: rgb(255, 255, 255);
+        background-color: #ae3a3a;
+        font-size: 10px;
+        margin-top: auto; /* Empuja el footer hacia el final de la página */
+        display: flex;
+        justify-content: center; /* Centra el texto horizontalmente */
+        align-items: center; /* Centra el texto verticalmente */
+        height: 50px; /* Ajusta la altura del footer */
+        width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    }
+
+    /* Evita que el contenido se desborde fuera de la vista */
     html, body {
-        overflow-x: hidden; /* Evita que haya scroll horizontal */
+        overflow: hidden !important; /* Desactiva scroll en grandes pantallas */
     }
 
+    /* Permite scroll si el contenido excede la altura de la ventana */
     body.index-page {
-        overflow-y: auto; /* Permite scroll vertical si es necesario */
-    }
-
-    /* Para evitar desbordamientos */
-    body.index-page {
-        flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible sin empujar el footer hacia abajo */
-    }
-
-    /* Eliminar cualquier margen extra en el body */
-    body {
-        margin: 0;
-    }
-
-    /* Se asegura de que el contenido no desborde más allá del footer */
-    html, body {
-        overflow: auto !important; /* Permite scroll si es necesario */
+        overflow-y: auto; /* Permite scroll vertical solo si el contenido excede el área visible */
     }
 }
 
-    
-}
