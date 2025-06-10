@@ -214,9 +214,9 @@ body.index-page {
         color: #fff;
         margin: 0;
         padding: 0;
-        height: 100%;
+        min-height: 100vh; /* Asegura que la página ocupe el 100% de la pantalla */
         display: flex;
-        flex-direction: column; /* Esto asegura que el footer siempre esté al final */
+        flex-direction: column; /* Flexbox para alinear footer al final */
     }
 
     /* Footer */
@@ -252,21 +252,21 @@ body.index-page {
         overflow-y: auto; /* Permite scroll vertical si es necesario */
     }
 
-    /* Estilo para el h1 dentro de .banner-text */
-    .banner-text h1 {
-        font-size: 14px;
-        margin-top: 40px;
-        animation: escribir 3s steps(40) forwards;
-    }
-
-    /* Se asegura de que el contenido no desborde más allá del footer */
+    /* Para evitar desbordamientos */
     body.index-page {
         flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible sin empujar el footer hacia abajo */
     }
 
-    /* Si se quiere un control más estricto sobre el scroll */
+    /* Eliminar cualquier margen extra en el body */
+    body {
+        margin: 0;
+    }
+
+    /* Se asegura de que el contenido no desborde más allá del footer */
     html, body {
         overflow: auto !important; /* Permite scroll si es necesario */
     }
+}
+
     
 }
