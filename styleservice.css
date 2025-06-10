@@ -16,28 +16,25 @@ body {
     background-color: #000;
     color: #fff;
     height: 100%; /* Asegura que html y body ocupen toda la altura */
-}
-
-html, body {
-    margin: 0; /* Elimina márgenes por defecto */
-    padding: 0; /* Elimina el padding por defecto */
     display: flex;
     flex-direction: column; /* Organiza el layout en columna */
 }
 
 body.index-page {
     overflow-y: auto; /* Permite scroll vertical si hay mucho contenido */
+    display: flex;
+    flex-direction: column; /* Asegura que el footer quede al final */
 }
 
 .footer {
     color: rgb(255, 255, 255);
     background-color: #ae3a3a;
     font-size: 10px;
-    margin-top: auto; /* Empuja el footer hacia el final de la página */
     display: flex; /* Activa flexbox */
     justify-content: center; /* Centra el texto horizontalmente */
     align-items: center; /* Centra el texto verticalmente */
     height: 50px; /* Altura del footer */
+    width: 100%; /* Ocupa todo el ancho */
 }
 
 /* ================================
@@ -92,8 +89,6 @@ body.index-page {
          SECCION SERV
 ================================ */
 
-/* Secciones de servicios */
-
 section:first-of-type {
     margin-top: 5rem;
 }
@@ -136,7 +131,7 @@ section p {
     /* Ajustes generales en la estructura */
     html, body {
         height: 100vh; /* Asegura que html y body ocupen toda la altura de la pantalla */
-        display: flex; /* Usamos flexbox para organizar el layout */
+        display: flex;
         flex-direction: column; /* Organizamos en columna */
     }
 
