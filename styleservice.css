@@ -16,14 +16,10 @@ body {
     background-color: #000;
     color: #fff;
     height: 100%; /* Asegura que html y body ocupen toda la altura */
-    display: flex;
-    flex-direction: column; /* Organiza el layout en columna */
 }
 
 body.index-page {
     overflow-y: auto; /* Permite scroll vertical si hay mucho contenido */
-    display: flex;
-    flex-direction: column; /* Asegura que el footer quede al final */
 }
 
 .footer {
@@ -130,21 +126,18 @@ section p {
 @media (max-width: 768px) {
     /* Ajustes generales en la estructura */
     html, body {
-        height: 100vh; /* Asegura que html y body ocupen toda la altura de la pantalla */
-        display: flex;
-        flex-direction: column; /* Organizamos en columna */
+        height: auto; /* Permitimos que el cuerpo crezca según el contenido */
     }
 
-    /* Contenido principal con espacio reservado para el footer */
+    /* Contenido principal */
     main {
-        flex-grow: 1; /* Ocupa todo el espacio disponible */
-        overflow-y: auto; /* Permite scroll vertical solo dentro de main */
-        padding-bottom: 50px; /* Espacio para evitar que el contenido toque el footer */
+        display: block; /* Usamos el flujo natural del documento */
+        margin-bottom: 50px; /* Espacio entre el contenido y el footer */
     }
 
-    /* Footer pegado al final */
+    /* Footer al final del contenido */
     .footer {
-        margin-top: auto; /* Empuja el footer hacia abajo */
+        margin-top: 0; /* Eliminamos margen automático */
         height: 50px; /* Altura del footer */
     }
 }
