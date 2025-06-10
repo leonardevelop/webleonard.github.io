@@ -1,0 +1,232 @@
+/* ================================
+            RESET Y BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+html, body {
+    overflow: hidden !important; /* Desactiva completamente el scroll */
+    height: 100% !important; /* Asegura que el contenido no desborde */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    display: flex;
+    flex-direction: column
+}
+
+
+body.index-page {
+    overflow-y: auto;
+}
+
+.footer {
+    color: rgb(255, 255, 255);
+    background-color: #ae3a3a;
+    font-size: 10px;
+    margin-top: auto; /* Empuja el footer hacia el final de la página */
+    
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 50px; /* Ajusta la altura del footer según necesites */
+}
+
+
+
+
+/* ================================
+          TIPOGRAFÍAS PERSONALIZADAS
+================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+/* Si tienes los archivos .ttf */
+@font-face {
+    font-family: "Sketsa";
+    src: url(fonts/Sketsa.ttf); /* Ajusta la ruta si es necesario */
+}
+
+@font-face {
+    font-family: "Saudagar";
+    src: url(fonts/Saudagar.ttf); /* Ajusta la ruta si es necesario */
+}
+
+/* ================================
+           NAVIGATION
+================================ */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-menu .nav-item {
+    margin: 0 15px;
+}
+
+.nav-menu .nav-link {
+    font-size: 14px;
+    color: #ffffff !important;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link.active {
+    color: rgb(255, 0, 140) !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+
+/* ================================
+         CONTENIDO PRINCIPAL
+================================ */
+
+/* Logo centrado */
+#hero {
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 60px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Banner de texto */
+.banner-text {
+    padding: 0 30px;
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+    font-family: "Saudagar";
+    z-index: 2;
+    position: relative;
+}
+
+.bannerSketsa {
+    font-family: "Saudagar";
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner-text h1 {
+    animation: escribir 3s steps(40) forwards;
+    font-size: 14px;
+    font-family: monospace;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #efc743;
+    position: relative;
+    margin-top: 40px;
+}
+
+@keyframes escribir {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.banner-text span {
+    color: #f4b71d;
+}
+
+.banner-text h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.1cm;
+    color: goldenrod;
+    margin-top: -30px !important; 
+}
+
+.parrafo1,
+.parrafo2 {
+    font-family: 'Roboto', sans-serif; /* Usa Roboto para párrafos */
+    font-size: 14px;
+    margin-top: 40px;
+    font-weight: 500; /* Aumenta el grosor */
+    color: #fff;
+    text-align: center; /* Puedes mantenerlo centrado si prefieres */
+    line-height: 1.4; /* Ajusta la altura de las líneas */
+    max-width: 600px; /* Ancho máximo para el párrafo */
+    margin: 0 auto; /* Centra el párrafo */
+    padding: 0 20px; /* Añade un poco de espacio a los lados */
+}
+
+
+    .logo {
+        max-width: 100px;
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+        margin-top: 10;
+    }
+
+    .banner-text h2 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+ 
+
+/* ================================
+       ESTILOS RESPONSIVOS
+================================ */
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+      html, body {
+        overflow: auto !important; /* Permite scroll cuando sea necesario en pantallas pequeñas */
+    }
+
+
+
+     .banner-text h1 {
+        font-size: 10px;
+        margin-bottom: 40px;
+        margin-top: 10;
+    }
+
+     .banner-text h1 {
+        animation: escribir 3s steps(40) forwards;
+        font-size: 14px;
+        font-family: monospace;
+        overflow: hidden;
+        border-right: 2px solid #efc743;
+        position: relative;
+        margin-top: 40px;
+    }
+    
+}

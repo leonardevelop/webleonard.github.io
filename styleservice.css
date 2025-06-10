@@ -1,0 +1,148 @@
+/* ================================
+            RESET Y BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+html, body {
+ /* Asegura que el contenido no desborde */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    display: flex;
+    flex-direction: column
+}
+
+
+body.index-page {
+    overflow-y: auto;
+}
+
+.footer {
+    color: rgb(255, 255, 255);
+    background-color: #ae3a3a;
+    font-size: 10px;
+    margin-top: auto; /* Empuja el footer hacia el final de la página */
+    
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 50px; /* Ajusta la altura del footer según necesites */
+}
+
+/* ================================
+           NAVIGATION
+================================ */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-menu .nav-item {
+    margin: 0 15px;
+}
+
+.nav-menu .nav-link {
+    font-size: 14px;
+    color: #ffffff !important;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link.active {
+    color: rgb(255, 0, 140) !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+/* ================================
+          TIPOGRAFÍAS PERSONALIZADAS
+================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face {
+    font-family: "Sketsa";
+    src: url(fonts/Sketsa.ttf);
+}
+
+@font-face {
+    font-family: "Saudagar";
+    src: url(fonts/Saudagar.ttf);
+}
+
+/* ================================
+         SECCION SERV
+================================ */
+
+/* Secciones de servicios */
+
+section:first-of-type {
+  margin-top: 5rem;
+}
+
+section {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
+  background-color: rgba(4, 3, 3, 0.9);
+  border-radius: 10px;
+}
+
+/* Estilo de títulos */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f39c12;
+  text-align: center;
+  margin-top: 40px;
+} 
+
+
+/* Estilo de párrafos */
+section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+  text-align: center;
+}
+
+
+/* ================================
+       ESTILOS RESPONSIVOS
+================================ */
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+}
