@@ -12,23 +12,21 @@
 
 html,
 body {
-
     font-family: "Montserrat", sans-serif;
     background-color: #000;
     color: #fff;
+    height: 100%; /* Asegura que html y body ocupen toda la altura */
 }
 
 html, body {
- /* Asegura que el contenido no desborde */
     margin: 0; /* Elimina márgenes por defecto */
     padding: 0; /* Elimina el padding por defecto */
     display: flex;
-    flex-direction: column
+    flex-direction: column; /* Organiza el layout en columna */
 }
 
-
 body.index-page {
-    overflow-y: auto;
+    overflow-y: auto; /* Permite scroll vertical si hay mucho contenido */
 }
 
 .footer {
@@ -36,11 +34,10 @@ body.index-page {
     background-color: #ae3a3a;
     font-size: 10px;
     margin-top: auto; /* Empuja el footer hacia el final de la página */
-    
     display: flex; /* Activa flexbox */
     justify-content: center; /* Centra el texto horizontalmente */
     align-items: center; /* Centra el texto verticalmente */
-    height: 50px; /* Ajusta la altura del footer según necesites */
+    height: 50px; /* Altura del footer */
 }
 
 /* ================================
@@ -98,81 +95,61 @@ body.index-page {
 /* Secciones de servicios */
 
 section:first-of-type {
-  margin-top: 5rem;
+    margin-top: 5rem;
 }
 
 section {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 1rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 3rem;
-  background-color: rgba(4, 3, 3, 0.9);
-  border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 3rem;
+    background-color: rgba(4, 3, 3, 0.9);
+    border-radius: 10px;
 }
 
 /* Estilo de títulos */
 section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #f39c12;
-  text-align: center;
-  margin-top: 40px;
-} 
-
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #f39c12; 
+    text-align: center;
+    margin-top: 40px;
+}
 
 /* Estilo de párrafos */
 section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ddd;
-  text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+    text-align: center;
 }
-
 
 /* ================================
        ESTILOS RESPONSIVOS
 ================================ */
 
 @media (max-width: 768px) {
-    main h1 {
-        font-size: 2rem;
-    }
-
-    main p {
-        font-size: 1rem;
-    }
-
     /* Ajustes generales en la estructura */
     html, body {
-        height: 100vh; /* Altura completa de la pantalla */
-        overflow: hidden; /* Desactivamos cualquier tipo de scroll global */
+        height: 100vh; /* Asegura que html y body ocupen toda la altura de la pantalla */
         display: flex; /* Usamos flexbox para organizar el layout */
         flex-direction: column; /* Organizamos en columna */
     }
 
-    /* Contenido principal con scroll limitado */
+    /* Contenido principal con espacio reservado para el footer */
     main {
         flex-grow: 1; /* Ocupa todo el espacio disponible */
         overflow-y: auto; /* Permite scroll vertical solo dentro de main */
-        padding-bottom: 80px; /* Espacio para evitar que el contenido toque el footer */
+        padding-bottom: 50px; /* Espacio para evitar que el contenido toque el footer */
     }
 
     /* Footer pegado al final */
     .footer {
-        position: relative; /* Mantenemos el footer relativo al cuerpo */
         margin-top: auto; /* Empuja el footer hacia abajo */
-        height: 80px; /* Altura del footer */
-        width: 100%; /* Ocupa todo el ancho */
-        color: rgb(255, 255, 255);
-        background-color: #ae3a3a;
-        font-size: 10px;
-        display: flex;
-        justify-content: center; /* Centra el texto horizontalmente */
-        align-items: center; /* Centra el texto verticalmente */
+        height: 50px; /* Altura del footer */
     }
-}
 }
