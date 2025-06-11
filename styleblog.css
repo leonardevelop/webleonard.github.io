@@ -1,0 +1,176 @@
+/* ================================
+            RESET Y BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100%; /* Asegura que html y body ocupen toda la altura */
+}
+
+body.index-page {
+    overflow-y: auto; /* Permite scroll vertical si hay mucho contenido */
+    display: flex;
+    flex-direction: column; /* Organiza el layout en columna */
+}
+
+.footer {
+    color: rgb(255, 255, 255);
+    background-color: #ae3a3a;
+    font-size: 10px;
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    height: 30px; /* Altura del footer */
+    width: 100%; /* Ocupa todo el ancho */
+
+}
+
+
+/* ================================
+           NAVIGATION
+================================ */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.nav-menu .nav-item {
+    margin: 0 15px;
+}
+
+.nav-menu .nav-link {
+    font-size: 14px;
+    color: #ffffff !important;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link.active {
+    color: rgb(255, 0, 140) !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transition: 0.3s;
+}
+
+/* ================================
+          TIPOGRAFÍAS PERSONALIZADAS
+================================ */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face {
+    font-family: "Sketsa";
+    src: url(fonts/Sketsa.ttf);
+}
+
+@font-face {
+    font-family: "Saudagar";
+    src: url(fonts/Saudagar.ttf);
+}
+
+/* ================================
+     MOSTRAR CONTENIDO ENCIMA DEL VIDEO
+================================ */
+
+.content-wrapper {
+    margin-top: 0px; /* Se elimina margen superior extra */
+    padding-top: 40px !important; /* Se ajusta para que no esté tan abajo */
+    margin-bottom: 10px !important; 
+    position: relative;
+    z-index: -0;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px 40px; /* Ajuste adicional para subir más el contenido */
+    background-color: #e2e2e2;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 140, 0.4);
+}
+
+.content-wrapper section {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+}
+
+.content-wrapper h2 {
+    font-size: 24px;
+    color: #ff008c;
+    border-bottom: 2px solid #ff008c;
+    padding-bottom: 10px;
+}
+
+.content-wrapper p,
+.content-wrapper li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.content-wrapper blockquote {
+    margin: 20px 0;
+    padding-left: 20px;
+    border-left: 3px solid #ff008c;
+    font-style: italic;
+    color: #000000;
+}
+
+.content-wrapper ul {
+    padding-left: 20px;
+}
+
+.content-wrapper ul li {
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.content-wrapper a {
+    color: #ff008c;
+    text-decoration: underline;
+}
+
+.content-wrapper a:hover {
+    color: #ff66cc;
+}
+
+
+/* ================================
+       ESTILOS RESPONSIVOS
+================================ */
+
+@media (max-width: 768px) {
+    /* Ajustes generales en la estructura */
+    html, body {
+        height: auto; /* Permitimos que el cuerpo crezca según el contenido */
+        display: block; /* Usamos el flujo natural del documento */
+    }
+
+    /* Contenido principal */
+    main {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        margin-bottom: 0; /* Eliminamos margen innecesario */
+    }
+
+    /* Footer al final del contenido */
+    .footer {
+        margin-top: 0; /* No necesitamos margen automático */
+        height: 50px; /* Altura del footer */
+        z-index: 1;
+    }
+}
